@@ -375,6 +375,38 @@ h3 {
   min-height: 160px;
 }
 
+.drive-link div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px 28px;
+  align-items: end;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.drive-link .eyebrow,
+.drive-link h2,
+.drive-link p {
+  grid-column: 1;
+}
+
+.drive-link h2 {
+  max-width: 820px;
+  margin-bottom: 0;
+  font-size: clamp(28px, 3.2vw, 42px);
+}
+
+.drive-link p {
+  max-width: 720px;
+}
+
+.drive-link .button {
+  grid-column: 2;
+  grid-row: 2 / 4;
+}
+
 .about {
   background: #fff;
 }
@@ -455,9 +487,18 @@ h3 {
 
   .summary-strip,
   .case-grid,
+  .drive-link div,
   .steps,
   .stack-grid {
     grid-template-columns: 1fr;
+  }
+
+  .drive-link .eyebrow,
+  .drive-link h2,
+  .drive-link p,
+  .drive-link .button {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .case-card.large,
@@ -548,6 +589,7 @@ h3 {
   }
 
   .hero-showcase,
+  .drive-link div,
   .summary-strip,
   .case-card,
   .steps article,
