@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -572,14 +573,14 @@ h3 {
   .hero-copy,
   .lead,
   h1 {
-    width: calc(100vw - 48px);
-    max-width: 340px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-actions,
   .quick-facts {
-    width: calc(100vw - 48px);
-    max-width: 340px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .quick-facts span {
@@ -599,8 +600,8 @@ h3 {
   }
 
   .hero-showcase {
-    width: calc(100vw - 48px);
-    max-width: 340px;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -611,7 +612,7 @@ h3 {
   .hero-actions,
   .quick-facts,
   .hero-showcase {
-    width: calc(100vw - 64px);
-    max-width: 260px;
+    width: 100%;
+    max-width: 100%;
   }
 }
