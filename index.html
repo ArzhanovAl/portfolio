@@ -3,44 +3,66 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Arzhanov - дизайн для маркетплейсов</title>
-    <meta name="description" content="Александр Аржанов - AI-first дизайнер карточек товаров, инфографики и визуального контента для маркетплейсов.">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>Александр Аржанов — дизайнер карточек для маркетплейсов</title>
+    <meta name="description" content="Александр Аржанов — дизайнер карточек товаров, инфографики, AI-визуала и rich content для Ozon и Wildberries. 500+ карточек, бренды KODALIFE, Velmora, Nexoro и другие.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Александр Аржанов — дизайнер карточек для маркетплейсов">
+    <meta property="og:description" content="500+ карточек для Ozon и WB. Инфографика, AI-визуал, rich content. Бренды: KODALIFE, Velmora, Nexoro, Zentrova, Mirano.">
+    <meta property="og:image" content="assets/og-cover.jpg">
+    <meta property="og:url" content="https://arzhanof.ru">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Arzhanov">
-        <img src="assets/logo.png" alt="">
-        <span>Arzhanov</span>
-      </a>
+      <a class="brand" href="#top" aria-label="Arzhanov">Arzhanov</a>
 
       <nav class="nav" aria-label="Навигация по сайту">
-        <a href="#work">Работы</a>
-        <a href="#method">Как работаю</a>
-        <a href="#portfolio">Портфолио</a>
+        <a href="#method">Процесс</a>
+        <a href="#portfolio">Работы</a>
+        <a href="#work">Кейс</a>
         <a href="#about">Обо мне</a>
         <a href="#contacts">Контакты</a>
       </nav>
 
-      <a class="header-cta" href="https://t.me/Arzhanof" target="_blank" rel="noopener">Telegram</a>
+      <a class="header-cta" href="https://t.me/Arzhanof" target="_blank" rel="noopener">Написать в Telegram</a>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-label="Главный экран">
+    <aside class="scroll-rail" aria-label="Прогресс страницы">
+      <span class="rail-line"><span class="rail-fill"></span></span>
+      <a href="#top" data-rail="top"><span></span>Главная</a>
+      <a href="#method" data-rail="method"><span></span>Процесс</a>
+      <a href="#portfolio" data-rail="portfolio"><span></span>Работы</a>
+      <a href="#work" data-rail="work"><span></span>Кейс</a>
+      <a href="#about" data-rail="about"><span></span>Обо мне</a>
+      <a href="#contacts" data-rail="contacts"><span></span>Контакты</a>
+    </aside>
+
+    <main>
+      <section class="hero page-section" id="top" aria-label="Главный экран" data-section="top" data-tone="hero">
         <div class="hero-copy reveal">
-          <p class="eyebrow">AI-first marketplace design</p>
-          <h1>Продуктовый дизайнер<br>для маркетплейсов</h1>
-          <p class="hero-note">Карточки товаров, инфографика, AI-визуал и rich content для Ozon, Wildberries и e-commerce.</p>
-          <div class="identity">
-            <span>Александр Аржанов</span>
-            <strong>AA</strong>
+          <p class="role-line">500+ карточек · Ozon / Wildberries · AI-визуал</p>
+          <h1>Александр Аржанов — дизайнер карточек для маркетплейсов</h1>
+          <p class="hero-note">Делаю карточки товаров, инфографику, AI-визуал, баннеры и rich content, которые быстро объясняют ценность товара. Работал с KODALIFE, Velmora, Nexoro, Zentrova, Mirano и другими брендами.</p>
+          <div class="hero-stats">
+            <div class="hero-stat"><strong>500+</strong><span>карточек</span></div>
+            <div class="hero-stat"><strong>350</strong><span>для одного бренда</span></div>
+            <div class="hero-stat"><strong>Ozon · WB</strong><span>маркетплейсы</span></div>
           </div>
+          <a class="button primary hero-mobile-cta" href="https://t.me/Arzhanof" target="_blank" rel="noopener">Написать в Telegram</a>
         </div>
 
         <div class="hero-stage reveal" data-carousel="hero">
           <div class="hero-slider">
             <article class="hero-slide is-active">
+              <img src="assets/serum-1.jpg" alt="Карточка товара для сыворотки">
+              <div class="slide-caption">
+                <span>Beauty visual</span>
+                <strong>Сыворотка</strong>
+              </div>
+            </article>
+            <article class="hero-slide">
               <img src="assets/bag-hero.jpg" alt="Карточка товара с сумкой">
               <div class="slide-caption">
                 <span>Fashion card</span>
@@ -54,13 +76,6 @@
                 <strong>CASIO</strong>
               </div>
             </article>
-            <article class="hero-slide">
-              <img src="assets/serum-1.jpg" alt="Карточка товара для сыворотки">
-              <div class="slide-caption">
-                <span>Beauty visual</span>
-                <strong>Сыворотка</strong>
-              </div>
-            </article>
           </div>
           <div class="hero-controls" aria-label="Управление каруселью">
             <button class="icon-button" type="button" data-prev aria-label="Предыдущая работа">←</button>
@@ -70,153 +85,211 @@
         </div>
       </section>
 
-      <section class="ticker" aria-label="Направления">
-        <span>Карточки WB/Ozon</span>
-        <span>AI-визуал</span>
-        <span>Инфографика</span>
-        <span>Rich content</span>
-        <span>Баннеры</span>
-        <span>Тексты для товаров</span>
-      </section>
-
-      <section class="section method" id="method">
+      <section class="section method page-section" id="method" data-section="method" data-tone="method">
         <div class="section-head reveal">
-          <p class="eyebrow">Метод</p>
-          <h2>Показываю не просто картинку, а путь от товара к продаже.</h2>
+          <p class="eyebrow">Процесс</p>
+          <h2>От товара к маркетплейс-визуалу</h2>
+          <p>Показываю, как из простого исходника собирается понятный коммерческий визуал: товар, модель, движение и финальная подача.</p>
         </div>
 
-        <div class="body-case reveal">
-          <article class="process-card">
-            <span>01</span>
-            <h3>Исходный товар</h3>
-            <p>Смотрю на форму, материал, посадку, сильные стороны и то, что покупатель должен понять без чтения длинного описания.</p>
-          </article>
-          <figure class="visual-card">
+        <div class="body-showcase reveal">
+          <figure>
             <img src="assets/body-source.jpg" alt="Исходный товар для генерации">
+            <figcaption>
+              <span>01</span>
+              <strong>Исходный товар</strong>
+              <p>Разбираю форму, посадку, материал и то, что покупатель должен понять с первого взгляда.</p>
+            </figcaption>
           </figure>
-          <article class="process-card">
-            <span>02</span>
-            <h3>AI-модель и контекст</h3>
-            <p>Собираю визуал под задачу: модель, свет, ракурс, ощущение товара и сценарий использования.</p>
-          </article>
-          <figure class="visual-card">
+          <figure>
             <img src="assets/body-model.jpg" alt="AI-модель для товара">
+            <figcaption>
+              <span>02</span>
+              <strong>AI-модель</strong>
+              <p>Подбираю модель, свет и ракурс, чтобы товар выглядел реалистично и коммерчески.</p>
+            </figcaption>
           </figure>
-          <article class="process-card">
-            <span>03</span>
-            <h3>Финальная подача</h3>
-            <p>Довожу до карточки или инфографики: иерархия, крупный смысл, параметры, аккуратная сетка и читаемость на телефоне.</p>
-          </article>
-          <figure class="visual-card">
-            <img src="assets/body-result.jpg" alt="Финальный AI-визуал товара">
+          <figure>
+            <video src="assets/ai-video.mp4" autoplay muted loop playsinline poster="assets/body-result.jpg"></video>
+            <figcaption>
+              <span>03</span>
+              <strong>Видео / движение</strong>
+              <p>Добавляю динамику, если нужно показать посадку, ткань или сценарий использования.</p>
+            </figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="section featured" id="work">
+      <section class="section portfolio page-section" id="portfolio" data-section="portfolio" data-tone="portfolio">
         <div class="section-head reveal">
-          <p class="eyebrow">Кейс</p>
-          <h2>Маркетплейс-визуал для товара</h2>
-          <p>Один товар можно показать через модель, параметры, преимущества и несколько сценариев выбора.</p>
-        </div>
-
-        <div class="case-strip reveal">
-          <figure>
-            <img src="assets/kodalife-main.jpg" alt="Главная карточка товара KODALIFE">
-            <figcaption>Главная карточка</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/kodalife-info.jpg" alt="Инфографика товара KODALIFE">
-            <figcaption>Инфографика</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/kodalife-card.jpg" alt="Карточка товара KODALIFE">
-            <figcaption>Преимущества</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="section portfolio" id="portfolio">
-        <div class="section-head reveal">
-          <p class="eyebrow">Портфолио</p>
-          <h2>Примеры работ</h2>
-          <p>Листайте карточки стрелками или свайпом. Здесь разные категории: fashion, beauty, товары для дома, техника.</p>
+          <p class="eyebrow">Работы</p>
+          <h2>Серии карточек</h2>
+          <p>Каждая обложка открывает серию: главная карточка, инфографика, преимущества и дополнительные экраны.</p>
         </div>
 
         <div class="work-carousel reveal">
           <button class="work-arrow left" type="button" data-scroll-left aria-label="Листать влево">←</button>
           <div class="work-track" tabindex="0" aria-label="Горизонтальная карусель работ">
             <article class="work-card">
-              <img src="assets/bag-hero.jpg" alt="Карточка товара сумка">
-              <div><span>Fashion</span><h3>Сумка</h3></div>
+              <button class="work-open" type="button" data-gallery="serum">
+                <div class="work-img-wrap">
+                  <img src="assets/serum-1.jpg" alt="Серия карточек для сыворотки">
+                </div>
+                <div class="work-card-info">
+                  <div>
+                    <p class="work-tag">Beauty · 3 карточки</p>
+                    <h3>Сыворотка</h3>
+                  </div>
+                  <span class="work-cta">Открыть серию →</span>
+                </div>
+              </button>
             </article>
             <article class="work-card">
-              <img src="assets/casio-1.jpg" alt="Карточка товара CASIO">
-              <div><span>Техника</span><h3>CASIO</h3></div>
+              <button class="work-open" type="button" data-gallery="bag">
+                <div class="work-img-wrap">
+                  <img src="assets/bag-hero.jpg" alt="Серия карточек для сумки">
+                </div>
+                <div class="work-card-info">
+                  <div>
+                    <p class="work-tag">Fashion · 3 карточки</p>
+                    <h3>Сумка</h3>
+                  </div>
+                  <span class="work-cta">Открыть серию →</span>
+                </div>
+              </button>
             </article>
             <article class="work-card">
-              <img src="assets/serum-1.jpg" alt="Карточка товара сыворотка">
-              <div><span>Beauty</span><h3>Сыворотка</h3></div>
+              <button class="work-open" type="button" data-gallery="casio">
+                <div class="work-img-wrap">
+                  <img src="assets/casio-1.jpg" alt="Серия карточек для часов CASIO">
+                </div>
+                <div class="work-card-info">
+                  <div>
+                    <p class="work-tag">Техника · 3 карточки</p>
+                    <h3>CASIO</h3>
+                  </div>
+                  <span class="work-cta">Открыть серию →</span>
+                </div>
+              </button>
             </article>
             <article class="work-card">
-              <img src="assets/basket-1.jpg" alt="Карточка товара набор корзин">
-              <div><span>Дом</span><h3>Набор корзин</h3></div>
+              <button class="work-open" type="button" data-gallery="basket">
+                <div class="work-img-wrap">
+                  <img src="assets/basket-1.jpg" alt="Серия карточек для набора корзин">
+                </div>
+                <div class="work-card-info">
+                  <div>
+                    <p class="work-tag">Дом · 3 карточки</p>
+                    <h3>Набор корзин</h3>
+                  </div>
+                  <span class="work-cta">Открыть серию →</span>
+                </div>
+              </button>
             </article>
             <article class="work-card">
-              <img src="assets/bag-2.jpg" alt="Инфографика сумки">
-              <div><span>Инфографика</span><h3>Сумка</h3></div>
-            </article>
-            <article class="work-card">
-              <img src="assets/casio-2.jpg" alt="Инфографика CASIO">
-              <div><span>Параметры</span><h3>Часы</h3></div>
-            </article>
-            <article class="work-card">
-              <img src="assets/serum-2.jpg" alt="Инфографика сыворотки">
-              <div><span>Состав</span><h3>Косметика</h3></div>
-            </article>
-            <article class="work-card">
-              <img src="assets/basket-2.jpg" alt="Карточка товара корзины">
-              <div><span>Сценарий</span><h3>Хранение</h3></div>
+              <button class="work-open" type="button" data-gallery="kodalife">
+                <div class="work-img-wrap">
+                  <img src="assets/kodalife-main.jpg" alt="Серия карточек KODALIFE">
+                </div>
+                <div class="work-card-info">
+                  <div>
+                    <p class="work-tag">WB / Ozon · 3 карточки</p>
+                    <h3>KODALIFE</h3>
+                  </div>
+                  <span class="work-cta">Открыть серию →</span>
+                </div>
+              </button>
             </article>
           </div>
           <button class="work-arrow right" type="button" data-scroll-right aria-label="Листать вправо">→</button>
         </div>
       </section>
 
-      <section class="section about" id="about">
-        <div class="about-copy reveal">
-          <p class="eyebrow">Обо мне</p>
-          <h2>Я собираю визуальную упаковку товара как интерфейс.</h2>
-          <p>Моя задача - быстро показать покупателю, что это за товар, зачем он нужен и почему стоит перейти к покупке. Работаю с карточками, инфографикой, AI-визуалом, баннерами, rich content, текстами и структурой e-commerce страниц.</p>
+      <section class="section featured page-section" id="work" data-section="work" data-tone="work">
+        <div class="section-head reveal">
+          <p class="eyebrow">Кейс</p>
+          <h2>Карточки товара для WB/Ozon</h2>
+          <p>Собираю серию экранов: главная карточка, инфографика, преимущества и детали выбора.</p>
         </div>
-        <div class="skill-grid reveal">
-          <div><span>01</span><strong>Карточки товаров для WB/Ozon</strong></div>
-          <div><span>02</span><strong>AI-модели и предметный визуал</strong></div>
-          <div><span>03</span><strong>Инфографика и коммерческие акценты</strong></div>
-          <div><span>04</span><strong>Тексты, офферы и структура страницы</strong></div>
-          <div><span>05</span><strong>Адаптивность и проверка читаемости</strong></div>
-          <div><span>06</span><strong>Быстрая подготовка тестовых заданий</strong></div>
+
+        <div class="case-strip reveal">
+          <figure>
+            <img src="assets/kodalife-main.jpg" alt="Главная карточка товара">
+            <figcaption>Главная карточка</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/kodalife-info.jpg" alt="Инфографика товара">
+            <figcaption>Инфографика</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/kodalife-card.jpg" alt="Карточка товара с преимуществами">
+            <figcaption>Преимущества</figcaption>
+          </figure>
         </div>
       </section>
 
-      <section class="contact-section" id="contacts">
+      <section class="section about page-section" id="about" data-section="about" data-tone="about">
+        <div class="about-copy reveal">
+          <p class="eyebrow">Обо мне</p>
+          <h2>Дизайнер с опытом 500+ карточек для Ozon и Wildberries.</h2>
+          <p>Работал с брендами KODALIFE, Velmora, Nexoro, Zentrova, Mirano и другими. Для одного клиента сделал 350 карточек подряд. Закрываю весь цикл визуальной подачи товара: от исходника и AI-генерации до финального макета для маркетплейса.</p>
+          <p>Работаю с карточками, инфографикой, AI-визуалом, обработкой фото, текстом, композицией, цветом и визуальной иерархией. Могу закрыть не один экран, а всю подачу товара.</p>
+        </div>
+        <div class="skill-grid reveal">
+          <div><span>Графические инструменты</span><strong>Photoshop, Illustrator, CorelDRAW, GIMP, Figma, Blender</strong><p>Обработка фото, подготовка изображений, макеты, сетка, цвет и композиция.</p></div>
+          <div><span>Нейросети</span><strong>ChatGPT, Midjourney, Stable Diffusion, Flux, SDXL, ComfyUI</strong><p>Генерация визуалов, референсы, промты, улучшение качества и исправление артефактов.</p></div>
+          <div><span>AI-пайплайны</span><strong>Sora, Wan, Whisper AI, LM Studio, локальные модели, LoRA</strong><p>Сборка процессов под конкретную задачу: модель, стиль, ракурс, серия изображений.</p></div>
+          <div><span>Маркетплейсы</span><strong>Карточки WB/Ozon, инфографика, rich content, баннеры</strong><p>Визуальная иерархия, коммерческие акценты, сценарии выбора и понятная подача товара.</p></div>
+          <div><span>Контент</span><strong>Тексты для карточек, офферы, презентации, соцсети</strong><p>Короткие формулировки без воды: назначение, выгода, параметры, CTA.</p></div>
+          <div><span>Смежные задачи</span><strong>Фото, AI-визуал, макеты, тестовые задания, упаковка товара</strong><p>Беру задачу шире одной картинки и довожу до аккуратного результата.</p></div>
+        </div>
+      </section>
+
+      <section class="contact-section page-section" id="contacts" data-section="contacts" data-tone="contacts">
         <div class="contact-panel reveal">
-          <p class="eyebrow">Контакты</p>
-          <h2>Готов обсудить карточки, сайт или тестовое задание.</h2>
+          <div>
+            <p class="eyebrow">Контакты</p>
+            <h2>Готов к тестовому заданию или обсуждению проекта.</h2>
+          </div>
           <div class="contact-actions">
             <a class="button primary" href="https://t.me/Arzhanof" target="_blank" rel="noopener">Написать в Telegram</a>
-            <a class="button" href="mailto:arzhanov.alexander1@gmail.com">Email</a>
+            <button class="button" type="button" data-copy-email="arzhanov.alexander1@gmail.com">Email</button>
             <a class="button" href="https://volgograd.hh.ru/resume/99440e11ff107c38a40039ed1f645064533771" target="_blank" rel="noopener">HH</a>
-            <a class="button" href="https://drive.google.com/drive/folders/1mNXCxKi9HZK_iiTWSabt9hUp837ZdcAp?usp=sharing" target="_blank" rel="noopener">Google Drive</a>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <span>Arzhanov</span>
-      <span>Marketplace design · AI visual · UI/UX</span>
+      <span>Александр Аржанов · 2024-2026</span>
+      <div class="footer-links">
+        <a href="https://t.me/Arzhanof" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://volgograd.hh.ru/resume/99440e11ff107c38a40039ed1f645064533771" target="_blank" rel="noopener">HH</a>
+        <button class="footer-link-button" type="button" data-copy-email="arzhanov.alexander1@gmail.com">Email</button>
+      </div>
+      <span>Дизайн карточек · AI-визуал · Маркетплейсы</span>
     </footer>
+
+    <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+      <div class="gallery-backdrop" data-close-gallery></div>
+      <section class="gallery-dialog" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+        <header class="gallery-header">
+          <div>
+            <p class="eyebrow">Серия работ</p>
+            <h2 id="galleryTitle">Портфолио</h2>
+          </div>
+          <button class="gallery-close" type="button" data-close-gallery aria-label="Закрыть">×</button>
+        </header>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+    </div>
+
+    <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+      <button type="button" data-close-lightbox aria-label="Закрыть">×</button>
+      <img src="" alt="">
+    </div>
+
+    <div class="copy-toast" id="copyToast" role="status" aria-live="polite">Email скопирован</div>
 
     <script src="script.js"></script>
   </body>
