@@ -3,187 +3,221 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Arzhanof - UI/UX и e-commerce дизайн</title>
-    <meta name="description" content="Александр Аржанов: UI/UX и e-commerce дизайнер. Карточки товаров, маркетплейс-визуал, AI-модели, инфографика и структура коммерческих страниц.">
+    <title>Arzhanov - дизайн для маркетплейсов</title>
+    <meta name="description" content="Александр Аржанов - AI-first дизайнер карточек товаров, инфографики и визуального контента для маркетплейсов.">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Arzhanof">
-        <span class="brand-mark">A</span>
-        <span>Arzhanof</span>
+      <a class="brand" href="#top" aria-label="Arzhanov">
+        <img src="assets/logo.png" alt="">
+        <span>Arzhanov</span>
       </a>
-      <nav class="nav" aria-label="Навигация">
-        <a href="#case">Кейс</a>
-        <a href="#system">Система</a>
-        <a href="#process">Процесс</a>
-        <a href="#contact">Контакты</a>
+
+      <nav class="nav" aria-label="Навигация по сайту">
+        <a href="#work">Работы</a>
+        <a href="#method">Как работаю</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#about">Обо мне</a>
+        <a href="#contacts">Контакты</a>
       </nav>
+
+      <a class="header-cta" href="https://t.me/Arzhanof" target="_blank" rel="noopener">Telegram</a>
     </header>
 
     <main id="top">
-      <section class="hero">
+      <section class="hero" aria-label="Главный экран">
         <div class="hero-copy reveal">
-          <p class="eyebrow">UI/UX · Marketplace · AI visual</p>
-          <h1>Делаю UI/UX для маркетплейсов и e-commerce.</h1>
-          <p class="lead">Собираю визуальную логику товара: первый экран, карточка, инфографика, rich content, AI-модель и короткий продающий текст. Фокус - быстрое понимание, аккуратная сетка и действие покупателя.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#case">Смотреть кейс</a>
+          <p class="eyebrow">AI-first marketplace design</p>
+          <h1>Продуктовый дизайнер<br>для маркетплейсов</h1>
+          <p class="hero-note">Карточки товаров, инфографика, AI-визуал и rich content для Ozon, Wildberries и e-commerce.</p>
+          <div class="identity">
+            <span>Александр Аржанов</span>
+            <strong>AA</strong>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal" data-carousel="hero">
+          <div class="hero-slider">
+            <article class="hero-slide is-active">
+              <img src="assets/bag-hero.jpg" alt="Карточка товара с сумкой">
+              <div class="slide-caption">
+                <span>Fashion card</span>
+                <strong>Сумка</strong>
+              </div>
+            </article>
+            <article class="hero-slide">
+              <img src="assets/casio-1.jpg" alt="Карточка товара для часов CASIO">
+              <div class="slide-caption">
+                <span>Product infographic</span>
+                <strong>CASIO</strong>
+              </div>
+            </article>
+            <article class="hero-slide">
+              <img src="assets/serum-1.jpg" alt="Карточка товара для сыворотки">
+              <div class="slide-caption">
+                <span>Beauty visual</span>
+                <strong>Сыворотка</strong>
+              </div>
+            </article>
+          </div>
+          <div class="hero-controls" aria-label="Управление каруселью">
+            <button class="icon-button" type="button" data-prev aria-label="Предыдущая работа">←</button>
+            <button class="icon-button" type="button" data-next aria-label="Следующая работа">→</button>
+          </div>
+          <a class="telegram-cta" href="https://t.me/Arzhanof" target="_blank" rel="noopener">Написать в Telegram</a>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Направления">
+        <span>Карточки WB/Ozon</span>
+        <span>AI-визуал</span>
+        <span>Инфографика</span>
+        <span>Rich content</span>
+        <span>Баннеры</span>
+        <span>Тексты для товаров</span>
+      </section>
+
+      <section class="section method" id="method">
+        <div class="section-head reveal">
+          <p class="eyebrow">Метод</p>
+          <h2>Показываю не просто картинку, а путь от товара к продаже.</h2>
+        </div>
+
+        <div class="body-case reveal">
+          <article class="process-card">
+            <span>01</span>
+            <h3>Исходный товар</h3>
+            <p>Смотрю на форму, материал, посадку, сильные стороны и то, что покупатель должен понять без чтения длинного описания.</p>
+          </article>
+          <figure class="visual-card">
+            <img src="assets/body-source.jpg" alt="Исходный товар для генерации">
+          </figure>
+          <article class="process-card">
+            <span>02</span>
+            <h3>AI-модель и контекст</h3>
+            <p>Собираю визуал под задачу: модель, свет, ракурс, ощущение товара и сценарий использования.</p>
+          </article>
+          <figure class="visual-card">
+            <img src="assets/body-model.jpg" alt="AI-модель для товара">
+          </figure>
+          <article class="process-card">
+            <span>03</span>
+            <h3>Финальная подача</h3>
+            <p>Довожу до карточки или инфографики: иерархия, крупный смысл, параметры, аккуратная сетка и читаемость на телефоне.</p>
+          </article>
+          <figure class="visual-card">
+            <img src="assets/body-result.jpg" alt="Финальный AI-визуал товара">
+          </figure>
+        </div>
+      </section>
+
+      <section class="section featured" id="work">
+        <div class="section-head reveal">
+          <p class="eyebrow">Кейс</p>
+          <h2>Маркетплейс-визуал для товара</h2>
+          <p>Один товар можно показать через модель, параметры, преимущества и несколько сценариев выбора.</p>
+        </div>
+
+        <div class="case-strip reveal">
+          <figure>
+            <img src="assets/kodalife-main.jpg" alt="Главная карточка товара KODALIFE">
+            <figcaption>Главная карточка</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/kodalife-info.jpg" alt="Инфографика товара KODALIFE">
+            <figcaption>Инфографика</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/kodalife-card.jpg" alt="Карточка товара KODALIFE">
+            <figcaption>Преимущества</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section portfolio" id="portfolio">
+        <div class="section-head reveal">
+          <p class="eyebrow">Портфолио</p>
+          <h2>Примеры работ</h2>
+          <p>Листайте карточки стрелками или свайпом. Здесь разные категории: fashion, beauty, товары для дома, техника.</p>
+        </div>
+
+        <div class="work-carousel reveal">
+          <button class="work-arrow left" type="button" data-scroll-left aria-label="Листать влево">←</button>
+          <div class="work-track" tabindex="0" aria-label="Горизонтальная карусель работ">
+            <article class="work-card">
+              <img src="assets/bag-hero.jpg" alt="Карточка товара сумка">
+              <div><span>Fashion</span><h3>Сумка</h3></div>
+            </article>
+            <article class="work-card">
+              <img src="assets/casio-1.jpg" alt="Карточка товара CASIO">
+              <div><span>Техника</span><h3>CASIO</h3></div>
+            </article>
+            <article class="work-card">
+              <img src="assets/serum-1.jpg" alt="Карточка товара сыворотка">
+              <div><span>Beauty</span><h3>Сыворотка</h3></div>
+            </article>
+            <article class="work-card">
+              <img src="assets/basket-1.jpg" alt="Карточка товара набор корзин">
+              <div><span>Дом</span><h3>Набор корзин</h3></div>
+            </article>
+            <article class="work-card">
+              <img src="assets/bag-2.jpg" alt="Инфографика сумки">
+              <div><span>Инфографика</span><h3>Сумка</h3></div>
+            </article>
+            <article class="work-card">
+              <img src="assets/casio-2.jpg" alt="Инфографика CASIO">
+              <div><span>Параметры</span><h3>Часы</h3></div>
+            </article>
+            <article class="work-card">
+              <img src="assets/serum-2.jpg" alt="Инфографика сыворотки">
+              <div><span>Состав</span><h3>Косметика</h3></div>
+            </article>
+            <article class="work-card">
+              <img src="assets/basket-2.jpg" alt="Карточка товара корзины">
+              <div><span>Сценарий</span><h3>Хранение</h3></div>
+            </article>
+          </div>
+          <button class="work-arrow right" type="button" data-scroll-right aria-label="Листать вправо">→</button>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="about-copy reveal">
+          <p class="eyebrow">Обо мне</p>
+          <h2>Я собираю визуальную упаковку товара как интерфейс.</h2>
+          <p>Моя задача - быстро показать покупателю, что это за товар, зачем он нужен и почему стоит перейти к покупке. Работаю с карточками, инфографикой, AI-визуалом, баннерами, rich content, текстами и структурой e-commerce страниц.</p>
+        </div>
+        <div class="skill-grid reveal">
+          <div><span>01</span><strong>Карточки товаров для WB/Ozon</strong></div>
+          <div><span>02</span><strong>AI-модели и предметный визуал</strong></div>
+          <div><span>03</span><strong>Инфографика и коммерческие акценты</strong></div>
+          <div><span>04</span><strong>Тексты, офферы и структура страницы</strong></div>
+          <div><span>05</span><strong>Адаптивность и проверка читаемости</strong></div>
+          <div><span>06</span><strong>Быстрая подготовка тестовых заданий</strong></div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contacts">
+        <div class="contact-panel reveal">
+          <p class="eyebrow">Контакты</p>
+          <h2>Готов обсудить карточки, сайт или тестовое задание.</h2>
+          <div class="contact-actions">
+            <a class="button primary" href="https://t.me/Arzhanof" target="_blank" rel="noopener">Написать в Telegram</a>
+            <a class="button" href="mailto:arzhanov.alexander1@gmail.com">Email</a>
+            <a class="button" href="https://volgograd.hh.ru/resume/99440e11ff107c38a40039ed1f645064533771" target="_blank" rel="noopener">HH</a>
             <a class="button" href="https://drive.google.com/drive/folders/1mNXCxKi9HZK_iiTWSabt9hUp837ZdcAp?usp=sharing" target="_blank" rel="noopener">Google Drive</a>
           </div>
-        </div>
-        <div class="hero-showcase reveal">
-          <figure class="phone-frame main-shot">
-            <img src="assets/wb-main-card.jpg" alt="Карточка товара для Wildberries">
-          </figure>
-          <div class="hero-note">
-            <span>WB card</span>
-            <strong>40-62</strong>
-            <p>Размеры, комплектация, цветовые варианты и ключевая посадка считываются за первые секунды.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="quick-bar" aria-label="Быстрые контакты">
-        <a href="https://t.me/Arzhanof" target="_blank" rel="noopener">Telegram</a>
-        <a href="mailto:arzhanov.alexander1@gmail.com">arzhanov.alexander1@gmail.com</a>
-        <a href="https://volgograd.hh.ru/resume/99440e11ff107c38a40039ed1f645064533771" target="_blank" rel="noopener">HH</a>
-        <a href="https://arzhanof.online/">Краткое резюме</a>
-      </section>
-
-      <section class="section case-section" id="case">
-        <div class="section-kicker reveal">
-          <p class="eyebrow">Selected case</p>
-          <h2>Карточка товара WB: от исходника к продаже.</h2>
-        </div>
-        <div class="case-layout">
-          <article class="case-text reveal">
-            <h3>Задача</h3>
-            <p>Показать набор слипов так, чтобы покупатель быстро понял товар: посадку, размерный диапазон, количество, цветовую линейку и ощущение материала.</p>
-            <ul>
-              <li>Первый экран без мелкого мусора.</li>
-              <li>Визуальная иерархия: товар, ключевой плюс, параметры.</li>
-              <li>AI-модель и инфографика как часть одной продуктовой системы.</li>
-            </ul>
-          </article>
-          <div class="case-gallery reveal">
-            <figure class="media-card tall">
-              <img src="assets/wb-infographic.jpg" alt="Инфографика товара для Wildberries">
-              <figcaption>Инфографика: посадка, поддержка, силуэт</figcaption>
-            </figure>
-            <figure class="media-card tall offset">
-              <img src="assets/ai-model-motion.jpg" alt="AI-модель для генерации видео">
-              <figcaption>AI-визуал: модель для демонстрации товара</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="section system-section" id="system">
-        <div class="section-heading reveal">
-          <p class="eyebrow">UI system</p>
-          <h2>Сетка, ритм и контентные акценты.</h2>
-          <p>Сайт теперь подает работы как UI/UX-кейс: не просто картинки, а решение задачи с понятной структурой, последовательностью и визуальными правилами.</p>
-        </div>
-        <div class="system-grid">
-          <article class="system-card reveal">
-            <span>01</span>
-            <h3>Иерархия</h3>
-            <p>Сначала товар и главный смысл, затем параметры, затем детали. Это снижает шум и ускоряет решение.</p>
-          </article>
-          <article class="system-card reveal">
-            <span>02</span>
-            <h3>Адаптив</h3>
-            <p>Контент собран на 12-колоночной логике для десктопа и в один ясный поток для мобильного экрана.</p>
-          </article>
-          <article class="system-card reveal">
-            <span>03</span>
-            <h3>Доверие</h3>
-            <p>Показывается не только финальная карточка, но и исходный товар, модель, видео и инфографика.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section build-section">
-        <div class="build-grid">
-          <figure class="media-card reveal">
-            <img src="assets/source-product.jpg" alt="Исходный товар для генерации">
-            <figcaption>Исходный товар</figcaption>
-          </figure>
-          <figure class="media-card reveal">
-            <img src="assets/ai-model-studio.jpg" alt="AI-модель в студии">
-            <figcaption>AI-модель</figcaption>
-          </figure>
-          <figure class="video-card reveal">
-            <video src="assets/ai-fashion-generation.mp4" autoplay muted loop playsinline poster="assets/ai-model-motion.jpg"></video>
-            <figcaption>Короткая демонстрация движения</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="section process-section" id="process">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Workflow</p>
-          <h2>Как я собираю коммерческий экран.</h2>
-        </div>
-        <ol class="process-list">
-          <li class="reveal">
-            <span>01</span>
-            <h3>Разбор товара</h3>
-            <p>Что продаем, какие параметры важны, где покупатель может сомневаться.</p>
-          </li>
-          <li class="reveal">
-            <span>02</span>
-            <h3>UX-структура</h3>
-            <p>Порядок смыслов, сетка, точки внимания, мобильная читаемость.</p>
-          </li>
-          <li class="reveal">
-            <span>03</span>
-            <h3>AI-визуал</h3>
-            <p>Генерация модели, подбор кадров, контроль реалистичности и контекста.</p>
-          </li>
-          <li class="reveal">
-            <span>04</span>
-            <h3>Финальная сборка</h3>
-            <p>Типографика, инфографика, цвет, экспорт и проверка на разных экранах.</p>
-          </li>
-        </ol>
-      </section>
-
-      <section class="contact-section" id="contact">
-        <div class="reveal">
-          <p class="eyebrow">Contact</p>
-          <h2>Готов обсудить карточки, сайт, интерфейс или тестовое задание.</h2>
-        </div>
-        <div class="contact-actions reveal">
-          <a class="button primary" href="https://t.me/Arzhanof" target="_blank" rel="noopener">Написать в Telegram</a>
-          <a class="button" href="mailto:arzhanov.alexander1@gmail.com">Email</a>
-          <a class="button" href="https://volgograd.hh.ru/resume/99440e11ff107c38a40039ed1f645064533771" target="_blank" rel="noopener">HH</a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <span>Александр Аржанов · Arzhanof</span>
-      <span>UI/UX для e-commerce и маркетплейсов</span>
+      <span>Arzhanov</span>
+      <span>Marketplace design · AI visual · UI/UX</span>
     </footer>
 
-    <script>
-      const reveals = document.querySelectorAll(".reveal");
-      if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.16 });
-        reveals.forEach((item) => observer.observe(item));
-      } else {
-        reveals.forEach((item) => item.classList.add("is-visible"));
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
