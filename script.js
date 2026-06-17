@@ -52,33 +52,104 @@ if (heroRoot) {
   showSlide(0);
 }
 
+// ── Бесконечная карусель работ ──────────────────────────────────────
 const workTrack = document.querySelector(".work-track");
-const arrowLeft = document.querySelector("[data-scroll-left]");
+const arrowLeft  = document.querySelector("[data-scroll-left]");
 const arrowRight = document.querySelector("[data-scroll-right]");
 
-const getCardWidth = () => {
-  const card = workTrack?.querySelector(".work-card");
-  if (!card) return 320;
-  return card.offsetWidth + parseInt(getComputedStyle(workTrack).gap || "20");
-};
+if (workTrack) {
+  // 1. Клонируем все карточки: вставляем копии в начало и конец
+  const origCards = [...workTrack.querySelectorAll(".work-card")];
+  const count = origCards.length;
 
-const updateArrows = () => {
-  if (!workTrack) return;
-  const atStart = workTrack.scrollLeft <= 8;
-  const atEnd = workTrack.scrollLeft >= workTrack.scrollWidth - workTrack.clientWidth - 8;
-  arrowLeft?.toggleAttribute("disabled", atStart);
-  arrowRight?.toggleAttribute("disabled", atEnd);
-};
+  // Клоны в конец (для прокрутки вправо за последний)
+  origCards.forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    clone.dataset.clone = "after";
+    workTrack.append(clone);
+  });
 
-arrowLeft?.addEventListener("click", () => {
-  workTrack?.scrollBy({ left: -getCardWidth() * 2, behavior: "smooth" });
-});
-arrowRight?.addEventListener("click", () => {
-  workTrack?.scrollBy({ left: getCardWidth() * 2, behavior: "smooth" });
-});
+  // Клоны в начало (для прокрутки влево за первый)
+  [...origCards].reverse().forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    clone.dataset.clone = "before";
+    workTrack.prepend(clone);
+  });
 
-workTrack?.addEventListener("scroll", updateArrows, { passive: true });
-updateArrows();
+  // Переподвешиваем обработчики галереи на клоны
+  const reattachGallery = () => {
+    workTrack.querySelectorAll("[data-gallery]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const gallery = galleries[button.dataset.gallery];
+        if (!gallery || !galleryModal || !galleryTitle || !galleryGrid) return;
+        galleryTitle.textContent = gallery.title;
+        galleryGrid.innerHTML = gallery.items.map(([src, label]) => `
+          <figure>
+            <img src="${src}" alt="${gallery.title}: ${label}">
+            <figcaption>${label}</figcaption>
+          </figure>
+        `).join("");
+        galleryModal.classList.add("is-open");
+        galleryModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      });
+    });
+  };
+
+  const getCardWidth = () => {
+    const card = workTrack.querySelector(".work-card");
+    if (!card) return 320;
+    return card.offsetWidth + parseInt(getComputedStyle(workTrack).columnGap || getComputedStyle(workTrack).gap || "20");
+  };
+
+  // 2. Стартовая позиция — начало оригинальных карточек (после клонов-before)
+  const jumpToStart = () => {
+    workTrack.style.scrollBehavior = "auto";
+    workTrack.scrollLeft = getCardWidth() * count;
+    workTrack.style.scrollBehavior = "";
+  };
+
+  jumpToStart();
+  window.addEventListener("resize", jumpToStart);
+
+  let isScrolling = false;
+
+  const slide = (direction) => {
+    if (isScrolling) return;
+    isScrolling = true;
+
+    const step = getCardWidth();
+    workTrack.style.scrollBehavior = "smooth";
+    workTrack.scrollLeft += step * direction;
+
+    // После анимации (~380ms) проверяем: не вышли ли за пределы оригинала
+    setTimeout(() => {
+      workTrack.style.scrollBehavior = "auto";
+
+      const cw = getCardWidth();
+      const minBound = cw * 1;           // левее 1-й клон
+      const maxBound = cw * (count + count - 1); // правее последнего оригинала
+
+      if (workTrack.scrollLeft < minBound) {
+        // Перепрыгнуть с тихим скроллом к концу оригинальных
+        workTrack.scrollLeft += cw * count;
+      } else if (workTrack.scrollLeft > maxBound) {
+        workTrack.scrollLeft -= cw * count;
+      }
+
+      workTrack.style.scrollBehavior = "";
+      isScrolling = false;
+    }, 420);
+  };
+
+  arrowLeft?.addEventListener("click",  () => slide(-1));
+  arrowRight?.addEventListener("click", () => slide(1));
+
+  // Переподвесить галерею после добавления клонов
+  reattachGallery();
+}
 
 const galleries = {
   serum: {

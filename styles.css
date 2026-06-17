@@ -521,7 +521,6 @@ figcaption p { margin-bottom: 0; }
   overflow-x: auto;
   padding: 6px 48px 28px;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
 .work-track::-webkit-scrollbar { display: none; }
@@ -532,7 +531,6 @@ figcaption p { margin-bottom: 0; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
-  scroll-snap-align: start;
   transition: transform 280ms cubic-bezier(.2,.7,.2,1), border-color 240ms ease, box-shadow 240ms ease;
 }
 .work-card:hover {
