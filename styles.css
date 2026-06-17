@@ -612,24 +612,24 @@ figcaption p { margin-bottom: 0; }
   top: 44%;
   z-index: 6;
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   place-items: center;
   border-radius: 50%;
-  border: 1px solid var(--line);
-  background: rgba(45, 50, 80, 0.84);
+  border: 1px solid rgba(245,239,229,0.18);
+  background: rgba(12, 10, 8, 0.82);
   color: var(--ink);
   font-weight: 700;
   font-size: 15px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   transform: translateY(-50%);
-  transition: background 160ms ease, transform 160ms ease, opacity 160ms ease;
+  transition: background 180ms ease, transform 180ms ease, opacity 180ms ease;
 }
 .work-arrow.left  { left: 8px; }
 .work-arrow.right { right: 8px; }
 .work-arrow:hover {
   background: var(--accent);
-  color: #2d3250;
+  color: #11100e;
   transform: translateY(-50%) scale(1.08);
 }
 .work-arrow[disabled] { opacity: 0.2; pointer-events: none; }
