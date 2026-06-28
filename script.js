@@ -192,6 +192,30 @@ const galleries = {
       ["assets/kodalife-card.jpg", "Преимущества"],
     ],
   },
+  wae: {
+    title: "WAE",
+    items: [
+      ["assets/wae-1.jpg", "Материал"],
+      ["assets/wae-2.jpg", "Имиджевая карточка"],
+      ["assets/wae-3.jpg", "Трендовая подача"],
+    ],
+  },
+  labbra: {
+    title: "LABBRA",
+    items: [
+      ["assets/labbra-1.jpg", "Главная карточка"],
+      ["assets/labbra-2.jpg", "Имидж"],
+      ["assets/labbra-3.jpg", "Размер и комплект"],
+      ["assets/labbra-4.jpg", "Характеристики"],
+    ],
+  },
+  marshall: {
+    title: "Marshall",
+    items: [
+      ["assets/marshall-1.jpg", "Главная карточка"],
+      ["assets/marshall-2.jpg", "Характеристики"],
+    ],
+  },
 };
 
 const galleryModal = document.querySelector("#galleryModal");
